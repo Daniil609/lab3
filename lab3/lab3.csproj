@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{AD9B7F6C-1D18-4CF4-B9B4-BE9AE09F2782}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>lab3</RootNamespace>
+    <AssemblyName>lab3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Archiv.cs" />
+    <Compile Include="Monitiring.cs" />
+    <Compile Include="Loger.cs" />
+    <Compile Include="parth.cs" />
+    <Compile Include="Parser\IParser.cs" />
+    <Compile Include="Parser\Jason.cs" />
+    <Compile Include="Parser\Xml.cs" />
+    <Compile Include="Info.cs" />
+    <Compile Include="Service\service.cs" />
+    <Compile Include="Service\logger.cs" />
+    <Compile Include="Manager\Pathes.cs" />
+    <Compile Include="Manager\Crypt.cs" />
+    <Compile Include="Manager\CopyOptions.cs" />
+    <Compile Include="Manager\Archive.cs" />
+    <Compile Include="Manager\ETLXmlJSON.cs" />
+    <Compile Include="Manager\ParsOptions.cs" />
+    <Compile Include="Manager\IParser.cs" />
+    <Compile Include="Parser\EmptyClass.cs" />
+    <Compile Include="Parser\jsonParse.cs" />
+    <Compile Include="Parser\XmlParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuratio\applicatoin.json" />
+    <None Include="Configuratio\configuration.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
